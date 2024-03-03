@@ -65,7 +65,7 @@ func CountByPeriod(min int64, max int64) (int, error) {
 		hourString := strings.Split(string(ticket[4]), ":")
 		hour, err := strconv.ParseInt(hourString[0], 10, 64)
 		if err != nil {
-			errors.New("Error al intentar parsear la hora.")
+			fmt.Println("Error al intentar parsear la hora.")
 		}
 		if hour >= min && hour <= max {
 			total += 1
